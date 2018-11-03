@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "829271833720",
+    "firebase_url": "https://logindemo-5132b.firebaseio.com",
+    "project_id": "logindemo-5132b",
+    "storage_bucket": "logindemo-5132b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:829271833720:android:ee39d0e667099055",
+        "android_client_info": {
+          "package_name": "com.td.kira.lab1ex5newloginregister"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "829271833720-5u8roslea3bh8mprt5hv234umvm18tgh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC40vat39CkC_SBPJhzSQoaCRqWfn_Qop4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
