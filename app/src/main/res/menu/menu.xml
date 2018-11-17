@@ -3,16 +3,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/logoutMenu"
-        android:orderInCategory="100"
-        app:showAsAction="never"
-        android:title="Logout" />
-
-    <item
         android:id="@+id/profileMenu"
-        android:orderInCategory="200"
+        android:orderInCategory="100"
         app:showAsAction="never"
         android:title="Profile">
     </item>
+
+    <item
+        android:id="@+id/GPSMenu"
+        android:orderInCategory="200"
+        app:showAsAction="never"
+        android:title="GPS" />
+
+    <item
+        android:id="@+id/logoutMenu"
+        android:orderInCategory="300"
+        app:showAsAction="never"
+        android:title="Logout" />
 
 </menu>
