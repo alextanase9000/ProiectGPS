@@ -21,6 +21,7 @@ public class UpdateProfile extends AppCompatActivity {
     private Button save;
     private FirebaseDatabase firebaseDatabase;
     private FirebaseAuth firebaseAuth;
+    private UserProfile userProfile;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,7 +42,7 @@ public class UpdateProfile extends AppCompatActivity {
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                UserProfile userProfile = dataSnapshot.getValue(UserProfile.class);
+                userProfile = dataSnapshot.getValue(UserProfile.class);
                 newUserName.setText(userProfile.getUserName());
                 newUserAge.setText(userProfile.getUserAge());
                 newUserEmail.setText(userProfile.getUserEmail());
