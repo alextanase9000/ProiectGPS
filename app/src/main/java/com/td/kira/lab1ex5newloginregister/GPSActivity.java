@@ -59,16 +59,13 @@ public class GPSActivity extends AppCompatActivity {
                 if( l == null){
                     Toast.makeText(getApplicationContext(),"GPS unable to get Value",Toast.LENGTH_SHORT).show();
                 }else {
-                    double lat = l.getLatitude();
-                    double lon = l.getLongitude();
-                    final Map<String, Double> locationMap = new HashMap<>();
-                    locationMap.put("Longitudine",lat);
-                    locationMap.put("Latitudine",lon);
+                    final double lat = l.getLatitude();
+                    final double lon = l.getLongitude();
                     databaseReference.addValueEventListener(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                             UserProfile userProfile = dataSnapshot.getValue(UserProfile.class);
-                             userProfile = new UserProfile(userProfile.userAge, userProfile.userEmail, userProfile.userName, userProfile.userBuget, locationMap);
+                             userProfile = new UserProfile(userProfile.userAge, userProfile.userEmail, userProfile.userName, userProfile.userBuget, lon, lat);
                             databaseReference.setValue(userProfile);
                         }
 
@@ -78,7 +75,6 @@ public class GPSActivity extends AppCompatActivity {
                         }
                     });
                     t.setText("Longitudine = " + lat + "\n" + "Latitudine = " + lon);
-                    Toast.makeText(getApplicationContext(),"Lat = "+lat+"\n lon = "+lon,Toast.LENGTH_SHORT).show();
                 }
             }
         });

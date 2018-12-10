@@ -7,7 +7,8 @@ public class UserProfile {
     public String userEmail;
     public String userName;
     static public String userBuget;
-    private Map<String,Double> GpsData;
+    private double lat;
+    private double lon;
 
 
     public  UserProfile(){
@@ -24,12 +25,13 @@ public class UserProfile {
 
     }
 
-    public UserProfile(String userAge, String userEmail, String userName, String userBuget, Map<String,Double> GpsData){
+    public UserProfile(String userAge, String userEmail, String userName, String userBuget, double lon, double lat){
         this.userAge = userAge;
         this.userEmail = userEmail;
         this.userName = userName;
         this.userBuget = userBuget;
-        this.GpsData = GpsData;
+        this.lon = lon;
+        this.lat = lat;
     }
 
     public String getUserAge() {
@@ -64,12 +66,19 @@ public class UserProfile {
         this.userBuget = userBuget;
     }
 
-    public void setGpsData(Map<String, Double> gpsData) {
-        GpsData = gpsData;
+    public void setLat(double lat) {
+        this.lat = lat;
     }
 
-    public Map<String, Double> getGpsData() {
-        return GpsData;
+    public void setLon(double lon) {
+        this.lon = lon;
+    }
+    public double getLat() {
+        return lat;
+    }
+
+    public double getLon() {
+        return lon;
     }
 }
 
